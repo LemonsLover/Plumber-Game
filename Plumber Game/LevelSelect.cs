@@ -21,7 +21,7 @@ namespace Plumber_Game
 
             for(int i = 1; i < Buttons.Length; i++)
             {
-                if(i <= PlumberGame.AvailableLevel)
+                if(i <= Levels.AvailableLevel)
                 {
                     Buttons[i].Enabled = true;
                     Buttons[i].Text = i.ToString();
@@ -44,14 +44,16 @@ namespace Plumber_Game
 
         private void buttonLevelRandom_Click(object sender, EventArgs e)
         {
-            PlumberGame.ThisLevel = 0;
+            Levels.CorrectLevel = 0;
+            Levels.ChangeCorrectLevelList(false);
             new PlumberGame().Show();
             this.Hide();
         }
 
         private void buttonLevel_Click(object sender, EventArgs e)
         {
-            PlumberGame.ThisLevel = int.Parse(((Button)sender).Text);
+            Levels.CorrectLevel = int.Parse(((Button)sender).Text);
+            Levels.ChangeCorrectLevelList(false);
             new PlumberGame().Show();
             this.Hide();
         }
@@ -64,14 +66,16 @@ namespace Plumber_Game
 
         private void buttonLevelRandom_Click_1(object sender, EventArgs e)
         {
-            PlumberGame.ThisLevel = rnd.Next(1, PlumberGame.AvailableLevel);
+            Levels.CorrectLevel = rnd.Next(1, Levels.AvailableLevel);
+            Levels.ChangeCorrectLevelList(false);
             new PlumberGame().Show();
             this.Hide();
         }
 
         private void comboBoxCustomLevels_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PlumberGame.ThisLevel = PlumberGame.LevelAmount + comboBoxCustomLevels.SelectedIndex + 1;
+            Levels.CorrectLevel = comboBoxCustomLevels.SelectedIndex;
+            Levels.ChangeCorrectLevelList(true);
             new PlumberGame().Show();
             this.Hide();
         }

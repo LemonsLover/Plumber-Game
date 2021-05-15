@@ -88,6 +88,8 @@ namespace Plumber_Game
             this.buttonClearPlayground = new System.Windows.Forms.Button();
             this.textBoxLevelName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.checkBoxNoClip = new System.Windows.Forms.CheckBox();
+            this.checkBoxOnTime = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanelPlayground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
@@ -636,7 +638,7 @@ namespace Plumber_Game
             // 
             this.labelCaption1.AutoSize = true;
             this.labelCaption1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCaption1.Location = new System.Drawing.Point(672, 188);
+            this.labelCaption1.Location = new System.Drawing.Point(683, 287);
             this.labelCaption1.Name = "labelCaption1";
             this.labelCaption1.Size = new System.Drawing.Size(219, 13);
             this.labelCaption1.TabIndex = 8;
@@ -646,7 +648,7 @@ namespace Plumber_Game
             // 
             this.labelCaption2.AutoSize = true;
             this.labelCaption2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCaption2.Location = new System.Drawing.Point(672, 217);
+            this.labelCaption2.Location = new System.Drawing.Point(683, 316);
             this.labelCaption2.Name = "labelCaption2";
             this.labelCaption2.Size = new System.Drawing.Size(281, 13);
             this.labelCaption2.TabIndex = 9;
@@ -656,7 +658,7 @@ namespace Plumber_Game
             // 
             this.labelCaption3.AutoSize = true;
             this.labelCaption3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCaption3.Location = new System.Drawing.Point(672, 244);
+            this.labelCaption3.Location = new System.Drawing.Point(683, 343);
             this.labelCaption3.Name = "labelCaption3";
             this.labelCaption3.Size = new System.Drawing.Size(324, 13);
             this.labelCaption3.TabIndex = 10;
@@ -666,7 +668,7 @@ namespace Plumber_Game
             // 
             this.labelCaption4.AutoSize = true;
             this.labelCaption4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCaption4.Location = new System.Drawing.Point(672, 275);
+            this.labelCaption4.Location = new System.Drawing.Point(683, 374);
             this.labelCaption4.Name = "labelCaption4";
             this.labelCaption4.Size = new System.Drawing.Size(300, 13);
             this.labelCaption4.TabIndex = 11;
@@ -695,7 +697,7 @@ namespace Plumber_Game
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(676, 311);
+            this.label3.Location = new System.Drawing.Point(683, 420);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(296, 13);
             this.label3.TabIndex = 16;
@@ -705,7 +707,7 @@ namespace Plumber_Game
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(681, 324);
+            this.label4.Location = new System.Drawing.Point(688, 433);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 13);
             this.label4.TabIndex = 17;
@@ -772,7 +774,7 @@ namespace Plumber_Game
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(676, 298);
+            this.label6.Location = new System.Drawing.Point(683, 407);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(258, 13);
             this.label6.TabIndex = 23;
@@ -883,25 +885,53 @@ namespace Plumber_Game
             // 
             // textBoxLevelName
             // 
-            this.textBoxLevelName.Location = new System.Drawing.Point(686, 427);
+            this.textBoxLevelName.Location = new System.Drawing.Point(687, 201);
             this.textBoxLevelName.Name = "textBoxLevelName";
             this.textBoxLevelName.Size = new System.Drawing.Size(296, 20);
             this.textBoxLevelName.TabIndex = 35;
+            this.textBoxLevelName.Text = "castomLevel1";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(683, 411);
+            this.label7.Location = new System.Drawing.Point(788, 185);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 13);
             this.label7.TabIndex = 36;
             this.label7.Text = "Название уровня:";
+            // 
+            // checkBoxNoClip
+            // 
+            this.checkBoxNoClip.AutoSize = true;
+            this.checkBoxNoClip.Checked = true;
+            this.checkBoxNoClip.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxNoClip.Location = new System.Drawing.Point(686, 227);
+            this.checkBoxNoClip.Name = "checkBoxNoClip";
+            this.checkBoxNoClip.Size = new System.Drawing.Size(127, 17);
+            this.checkBoxNoClip.TabIndex = 37;
+            this.checkBoxNoClip.Text = "проход через стены";
+            this.checkBoxNoClip.UseVisualStyleBackColor = true;
+            this.checkBoxNoClip.CheckedChanged += new System.EventHandler(this.checkBoxNoClip_CheckedChanged);
+            // 
+            // checkBoxOnTime
+            // 
+            this.checkBoxOnTime.AutoSize = true;
+            this.checkBoxOnTime.Checked = true;
+            this.checkBoxOnTime.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxOnTime.Location = new System.Drawing.Point(851, 227);
+            this.checkBoxOnTime.Name = "checkBoxOnTime";
+            this.checkBoxOnTime.Size = new System.Drawing.Size(73, 17);
+            this.checkBoxOnTime.TabIndex = 38;
+            this.checkBoxOnTime.Text = "на время";
+            this.checkBoxOnTime.UseVisualStyleBackColor = true;
             // 
             // LevelCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(994, 661);
+            this.Controls.Add(this.checkBoxOnTime);
+            this.Controls.Add(this.checkBoxNoClip);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBoxLevelName);
             this.Controls.Add(this.buttonClearPlayground);
@@ -1051,5 +1081,7 @@ namespace Plumber_Game
         private System.Windows.Forms.Button buttonClearPlayground;
         private System.Windows.Forms.TextBox textBoxLevelName;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckBox checkBoxNoClip;
+        private System.Windows.Forms.CheckBox checkBoxOnTime;
     }
 }

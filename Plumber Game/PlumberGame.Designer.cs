@@ -125,7 +125,6 @@ namespace Plumber_Game
             this.buttonCheck.Text = "проверить";
             this.buttonCheck.UseVisualStyleBackColor = true;
             this.buttonCheck.Visible = false;
-            this.buttonCheck.Click += new System.EventHandler(this.buttonCheck_Click);
             // 
             // buttonGenerate
             // 

@@ -59,6 +59,7 @@
     <Compile Include="Character.Designer.cs">
       <DependentUpon>Character.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameField.cs" />
     <Compile Include="Level.cs" />
     <Compile Include="LevelCreator.cs">
       <SubType>Form</SubType>

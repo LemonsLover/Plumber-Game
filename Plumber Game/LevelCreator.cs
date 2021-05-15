@@ -7,7 +7,7 @@ namespace Plumber_Game
 {
     public partial class LevelCreator : Form
     {
-        static List<Image> TilesIcons = PlumberGame.TilesIcons;
+        static List<Image> TilesIcons = GameField.TilesIcons;
 
         private int selectedTileId = 1;
 
@@ -136,7 +136,7 @@ namespace Plumber_Game
             {
                 try
                 {
-                    Levels.AddLevel(new Level(textBoxLevelName.Text, level));
+                    Levels.AddLevel(new Level(textBoxLevelName.Text, level, true, checkBoxNoClip.Checked, checkBoxOnTime.Checked));
                     character.ChangeCharPosition(2);
                     MessageBox.Show($"Уровень был успешно сошранен !", "Успех !");
                     character.ChangeCharPosition(3);
@@ -152,6 +152,8 @@ namespace Plumber_Game
 
     private void LevelCreator_Load(object sender, EventArgs e)
     {
+       textBoxLevelName.Text = "castomLevel" + Levels.CastomLevelsList.Count;
+
         this.MouseWheel += FandeMouseWeel;
         FillWithEmpty();
         pictureBoxNextTile.BackgroundImage = TilesIcons[selectedTileId + 1];
@@ -196,5 +198,35 @@ namespace Plumber_Game
     {
         FillEmptyWithRandom();
     }
-}
+
+        private void checkBoxNoClip_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxNoClip.Checked)
+            {
+                pictureBoxUi1.Visible = true;
+                pictureBoxUi2.Visible = true;
+                pictureBoxUi3.Visible = true;
+                pictureBoxUi4.Visible = true;
+                pictureBoxUi5.Visible = true;
+                pictureBoxUi6.Visible = true;
+                pictureBoxUi7.Visible = true;
+                pictureBoxUi8.Visible = true;
+                pictureBoxUi9.Visible = true;
+                pictureBoxUi10.Visible = true;
+            }
+            else
+            {
+                pictureBoxUi1.Visible = false;
+                pictureBoxUi2.Visible = false;
+                pictureBoxUi3.Visible = false;
+                pictureBoxUi4.Visible = false;
+                pictureBoxUi5.Visible = false;
+                pictureBoxUi6.Visible = false;
+                pictureBoxUi7.Visible = false;
+                pictureBoxUi8.Visible = false;
+                pictureBoxUi9.Visible = false;
+                pictureBoxUi10.Visible = false;
+            }
+        }
+    }
 }

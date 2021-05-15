@@ -6,13 +6,13 @@ namespace Plumber_Game
 {
     class Levels
     {
-        public static List<Level> LevelsList = new List<Level>()
+        public static List<Level> GameLevelsList = new List<Level>()
         {
-            new Level("0" ,new int[] {     3, 0, 0, 0, 0,
+            new Level("generated" ,new int[] {     3, 0, 0, 0, 0,
                                             0, 0, 0, 0, 0,
                                             0, 0, 0, 0, 0,
                                             0, 0, 0, 0, 0,
-                                            0, 0, 0, 0, 1  }),
+                                            0, 0, 0, 0, 1  },false, true),
 
             new Level("1" ,new int[] {     3, 8, 0, 0, 0,
                                             0, 10, 0, 0, 0,
@@ -108,47 +108,57 @@ namespace Plumber_Game
                                             12, 0, 11, 0, 5,
                                             9, 5, 11, 0, 0,
                                             0, 9, 11, 5, 16,
-                                            9, 5, 11, 5, 1  }),
+                                            9, 5, 11, 5, 1  },false, true),
 
             new Level("17" ,new int[] {    1, 5, 5, 0, 3,
                                             9, 5, 9, 0, 0,
                                             0, 0, 9, 0, 0,
                                             5, 5, 9, 5, 9,
-                                            12, 5, 5, 5, 16  }),
+                                            12, 5, 5, 5, 16  },false, true),
 
             new Level("18" ,new int[] {    3, 5, 0, 13, 5,
                                             9, 5, 5, 9, 5,
                                             16, 16, 5, 16, 16,
                                             5, 5, 9, 5, 9,
-                                            5, 5, 5, 5, 1  }),
+                                            5, 5, 5, 5, 1  },false, true),
 
             new Level("19" ,new int[] {    9, 5, 11, 5, 9,
                                             9, 5, 11, 5, 1,
                                             11, 11, 11, 11, 11,
                                             3, 5, 11, 5, 9,
-                                            9, 5, 11, 5, 9}),
+                                            9, 5, 11, 5, 9},false, true),
 
             new Level("20" ,new int[] {    1, 3, 9, 15, 7,
                                             9, 16, 9, 7, 9,
                                             5, 9,  9, 5, 13,
                                             5, 5, 5, 9, 14,
-                                            9, 12, 5, 12, 6 })
+                                            9, 12, 5, 12, 6 },false, true)
 
     };
 
         public static List<Level> CastomLevelsList = new List<Level>();
 
+        public static List<Level> CorrectlevelList = GameLevelsList;
 
+        public static int LevelAmount = Levels.GameLevelsList.Count - 1;
+        public static int CorrectLevel = 1;
+        public static int AvailableLevel = Properties.Settings.Default.avalibleLevel;
 
         static Levels()
         {
             if (!File.Exists("levels.json"))
-                File.Create("levels.json");
+                File.Create("levels.json").Close();
+
             else
-            {
                 CastomLevelsList = GetCustomLevels();
-                LevelsList.AddRange(CastomLevelsList);
-            }
+        }
+
+        public static void ChangeCorrectLevelList(bool isCustomMode)
+        {
+            if(isCustomMode)
+                CorrectlevelList = CastomLevelsList;
+            else
+                CorrectlevelList = GameLevelsList;
         }
 
         public static void AddLevel(Level level)
@@ -160,8 +170,8 @@ namespace Plumber_Game
 
         public static List<Level> GetCustomLevels()
         {
-            LevelsList.AddRange(CastomLevelsList);
-            return JsonConvert.DeserializeObject<List<Level>>(File.ReadAllText("levels.json"));
+            List<Level> levels = JsonConvert.DeserializeObject<List<Level>>(File.ReadAllText("levels.json"));
+            return levels != null ? levels : new List<Level>();
         }
     }
 }

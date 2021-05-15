@@ -14,23 +14,23 @@ namespace Plumber_Game
         {
             labelTimeLeft.Text = $"Оставшаеся время: {PlumberGame.time}c";
             labelAmountOfConections.Text = $"Длина соединеия: {PlumberGame.amountOfConections}т";
-            if (PlumberGame.ThisLevel == PlumberGame.AvailableLevel)
+            if (Levels.CorrectLevel == Levels.AvailableLevel)
             {
 
-                Properties.Settings.Default.avalibleLevel = ++PlumberGame.AvailableLevel;
+                Properties.Settings.Default.avalibleLevel = ++Levels.AvailableLevel;
 
                 Properties.Settings.Default.Save();
             }
 
 
 
-            if (PlumberGame.ThisLevel == PlumberGame.LevelAmount)
+            if (Levels.CorrectLevel == Levels.LevelAmount)
             {
                 labelCompGame.Visible = true;
                 buttonNextLevel.Enabled = false;
             }
 
-            else if (PlumberGame.ThisLevel == 0 || PlumberGame.ThisLevel > 20)
+            else if (Levels.CorrectLevel == 0 || Levels.CorrectLevel > 20)
             {
                 labelRandomly.Visible = true;
                 buttonNextLevel.Enabled = false;
@@ -38,9 +38,9 @@ namespace Plumber_Game
             else
                 labelWin.Visible = true;
 
-            if (PlumberGame.ThisLevel == 0)
+            if (Levels.CorrectLevel == 0)
                 buttonAgain.Visible = true;
-            if (PlumberGame.ThisLevel != 0)
+            if (Levels.CorrectLevel != 0)
                 buttonNextLevel.Visible = true;
         }
 
@@ -57,7 +57,7 @@ namespace Plumber_Game
 
         private void buttonNextLevel_Click(object sender, EventArgs e)
         {
-            PlumberGame.ThisLevel++;
+            Levels.CorrectLevel++;
             new PlumberGame().Show();
             this.Hide();
         }

@@ -13,11 +13,21 @@ namespace Plumber_Game
         public string Name { get; set; }
         [JsonProperty("levelArr")]
         public int[] LevelArr { get; set; }
+        [JsonProperty("isCastom")]
+        public bool IsCastom { get; set; }
+        [JsonProperty("isNoClip")]
+        public bool isNoClip { get; set; }
+        [JsonProperty("isOnTime")]
+        public bool isOnTime { get; set; }
 
-        public Level(string Name, int[] LevelArr)
+
+        public Level(string Name, int[] LevelArr, bool isCastom = false, bool isNoClip = false, bool isOnTime = true)
         {
             this.Name = Name;
             this.LevelArr = LevelArr;
+            this.IsCastom = isCastom;
+            this.isNoClip = isNoClip;
+            this.isOnTime = isOnTime;
         }
     }
 }
