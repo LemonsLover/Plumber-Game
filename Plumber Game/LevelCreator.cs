@@ -11,7 +11,7 @@ namespace Plumber_Game
 
         private int selectedTileId = 1;
 
-        Character character = new Character();
+        CharacterDisplay character = new CharacterDisplay();
 
         public LevelCreator()
         {

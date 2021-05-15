@@ -1,7 +1,7 @@
 ﻿
 namespace Plumber_Game
 {
-    partial class Character
+    partial class CharacterDisplay
     {
         /// <summary>
         /// Required designer variable.

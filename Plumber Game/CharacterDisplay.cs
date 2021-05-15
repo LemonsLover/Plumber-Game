@@ -11,13 +11,15 @@ using System.Windows.Forms;
 
 namespace Plumber_Game
 {
-    public partial class Character : Form
+    public partial class CharacterDisplay : Form
     {
         List<Image> CharsIGS = new List<Image> { null,Resources.char_pos1, Resources.char_pos2, Resources.char_pos3 };
         List<Image> HatsIGS = new List<Image> { null, Resources.hat_1, Resources.hat_2, Resources.hat_3, Resources.hat_4 };
         Point HatLocation;
 
-        public Character()
+        int _selectedHat = Properties.Settings.Default.selectedHat;
+
+        public CharacterDisplay()
         {
             InitializeComponent();
             HatLocation = pictureBoxHat.Location;
@@ -81,7 +83,7 @@ namespace Plumber_Game
         {
             this.BackColor = Color.DarkGray;
             this.TransparencyKey = Color.DarkGray;
-            ChangeCharsHat(Properties.Settings.Default.selectedHat);
+            ChangeCharsHat(_selectedHat);
         }
 
 
@@ -89,14 +91,14 @@ namespace Plumber_Game
         {
             Application.Exit();
         }
-        int b = 1;
+        
         private void Character_Click(object sender, EventArgs e)
         {
-            b++;
-            if (b == HatsIGS.Count)
-                ChangeCharsHat(b = 1);
+            _selectedHat++;
+            if (_selectedHat == HatsIGS.Count)
+                ChangeCharsHat(_selectedHat = 1);
             else
-                ChangeCharsHat(b);
+                ChangeCharsHat(_selectedHat);
         }
     }
 }

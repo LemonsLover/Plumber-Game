@@ -13,7 +13,7 @@ namespace Plumber_Game
         public static bool noClip = false;
         public static int amountOfConections = 0;
 
-        Character character = new Character();
+        CharacterDisplay character = new CharacterDisplay();
         GameField gameField;
 
         public PlumberGame()
@@ -27,15 +27,7 @@ namespace Plumber_Game
         {
 
             time = 60;
-            labelThisLevel.Text = $"Уровень {Levels.CorrectlevelList[Levels.CorrectLevel].Name}";
             this.Text = $"Plumber game | Уровень {Levels.CorrectlevelList[Levels.CorrectLevel].Name}";
-
-
-            if (Levels.CorrectLevel == 0 && !Levels.CorrectlevelList[0].IsCastom)
-                buttonGenerate.Visible = true;
-            else
-                buttonGenerate.Visible = false;
-
 
             noClip = Levels.CorrectlevelList[Levels.CorrectLevel].isNoClip;
             
@@ -67,19 +59,19 @@ namespace Plumber_Game
                 pictureBoxUi10.Visible = true;
             }
 
-            if (Levels.AvailableLevel == 1 && Levels.CorrectLevel == 1)
+            if (Levels.AvailableLevel == 1 && Levels.CorrectLevel == 1 && !Levels.CorrectlevelList[Levels.CorrectLevel].IsCastom)
                 MessageBox.Show("В этой игре тебе нужно вжится в роль водопроводчика и соеденить начало и конец водопровода за отведенное время. Удачи !", "Привет !",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            if (Levels.AvailableLevel == 6 && Levels.CorrectLevel == 6)
+            if (Levels.AvailableLevel == 6 && Levels.CorrectLevel == 6 && !Levels.CorrectlevelList[Levels.CorrectLevel].IsCastom)
                 MessageBox.Show("Начиная с этого уровня тебе будут иногда попадатся пустые клетки без труб. Удачи !", "Поздравляю !",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            if (Levels.AvailableLevel == 11 && Levels.CorrectLevel == 11)
+            if (Levels.AvailableLevel == 11 && Levels.CorrectLevel == 11 && !Levels.CorrectlevelList[Levels.CorrectLevel].IsCastom)
                 MessageBox.Show("Ты прошел ещё 1 ряд ! Теперь некоторые из труб вращать нельзя ! Удачи !", "Поздравляю !",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            if (Levels.AvailableLevel == 16 && Levels.CorrectLevel == 16)
+            if (Levels.AvailableLevel == 16 && Levels.CorrectLevel == 16 && !Levels.CorrectlevelList[Levels.CorrectLevel].IsCastom)
             {
                 MessageBox.Show("Ты подошел к финишной прямой, это последний ряд уровней ! Теперь труба переходит в одинаковые цвета по краям!", "Поздравляю !",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -100,7 +92,7 @@ namespace Plumber_Game
             PictureBox tile = (PictureBox)sender;
 
 
-            TileRotation(ref tile);
+            GameField.RotateTile(ref tile);
 
             if (gameField.Check(noClip))
             {
@@ -113,27 +105,6 @@ namespace Plumber_Game
             }
         }
 
-       
-
-        private void TileRotation(ref PictureBox tile)
-        {
-            //knee
-            if (tile.Image == GameField.TilesIcons[5])
-                tile.Image = GameField.TilesIcons[6];
-            else if (tile.Image == GameField.TilesIcons[6])
-                tile.Image = GameField.TilesIcons[7];
-            else if (tile.Image == GameField.TilesIcons[7])
-                tile.Image = GameField.TilesIcons[8];
-            else if (tile.Image == GameField.TilesIcons[8])
-                tile.Image = GameField.TilesIcons[5];
-
-            //regular tube
-            if (tile.Image == GameField.TilesIcons[9])
-                tile.Image = GameField.TilesIcons[10];
-            else if (tile.Image == GameField.TilesIcons[10])
-                tile.Image = GameField.TilesIcons[9];
-        }
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -143,8 +114,7 @@ namespace Plumber_Game
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            labelTimer.Text = $"Осталось времени: {--time}";
-            this.Text = $"Plumber game | Уровень {Levels.CorrectlevelList[Levels.CorrectLevel].Name} | Осталось времени: {time}";
+            this.Text = $"Plumber game | Уровень {Levels.CorrectlevelList[Levels.CorrectLevel].Name} | Осталось времени: {--time}";
             if (time == 0)
             {
                 this.Enabled = false;
@@ -158,11 +128,6 @@ namespace Plumber_Game
         }
 
         private void PlumberGame_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void buttonMenu_Click(object sender, EventArgs e)
         {
             timer.Enabled = false;
             new Menu().Show();

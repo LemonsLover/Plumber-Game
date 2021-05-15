@@ -31,8 +31,6 @@ namespace Plumber_Game
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlumberGame));
-            this.buttonCheck = new System.Windows.Forms.Button();
-            this.buttonGenerate = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -60,9 +58,6 @@ namespace Plumber_Game
             this.pictureBox25 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.labelTimer = new System.Windows.Forms.Label();
-            this.labelThisLevel = new System.Windows.Forms.Label();
-            this.buttonMenu = new System.Windows.Forms.Button();
             this.pictureBoxUi3 = new System.Windows.Forms.PictureBox();
             this.pictureBoxUi4 = new System.Windows.Forms.PictureBox();
             this.pictureBoxUi5 = new System.Windows.Forms.PictureBox();
@@ -73,8 +68,6 @@ namespace Plumber_Game
             this.pictureBoxUi9 = new System.Windows.Forms.PictureBox();
             this.pictureBoxUi2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxUi1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox26 = new System.Windows.Forms.PictureBox();
-            this.pictureBox27 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -111,32 +104,7 @@ namespace Plumber_Game
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUi9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUi2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUi1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonCheck
-            // 
-            this.buttonCheck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCheck.Location = new System.Drawing.Point(369, 0);
-            this.buttonCheck.Name = "buttonCheck";
-            this.buttonCheck.Size = new System.Drawing.Size(87, 27);
-            this.buttonCheck.TabIndex = 1;
-            this.buttonCheck.Text = "проверить";
-            this.buttonCheck.UseVisualStyleBackColor = true;
-            this.buttonCheck.Visible = false;
-            // 
-            // buttonGenerate
-            // 
-            this.buttonGenerate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonGenerate.Location = new System.Drawing.Point(276, 1);
-            this.buttonGenerate.Name = "buttonGenerate";
-            this.buttonGenerate.Size = new System.Drawing.Size(87, 27);
-            this.buttonGenerate.TabIndex = 2;
-            this.buttonGenerate.Text = "генерировать";
-            this.buttonGenerate.UseVisualStyleBackColor = true;
-            this.buttonGenerate.Visible = false;
-            this.buttonGenerate.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -574,7 +542,7 @@ namespace Plumber_Game
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 30);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -591,40 +559,10 @@ namespace Plumber_Game
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // labelTimer
-            // 
-            this.labelTimer.AutoSize = true;
-            this.labelTimer.Location = new System.Drawing.Point(542, 9);
-            this.labelTimer.Name = "labelTimer";
-            this.labelTimer.Size = new System.Drawing.Size(0, 13);
-            this.labelTimer.TabIndex = 4;
-            // 
-            // labelThisLevel
-            // 
-            this.labelThisLevel.AutoSize = true;
-            this.labelThisLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelThisLevel.Location = new System.Drawing.Point(93, 7);
-            this.labelThisLevel.Name = "labelThisLevel";
-            this.labelThisLevel.Size = new System.Drawing.Size(75, 16);
-            this.labelThisLevel.TabIndex = 5;
-            this.labelThisLevel.Text = "Уровень ";
-            // 
-            // buttonMenu
-            // 
-            this.buttonMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMenu.Location = new System.Drawing.Point(12, 4);
-            this.buttonMenu.Name = "buttonMenu";
-            this.buttonMenu.Size = new System.Drawing.Size(75, 23);
-            this.buttonMenu.TabIndex = 6;
-            this.buttonMenu.Text = "Меню";
-            this.buttonMenu.UseVisualStyleBackColor = true;
-            this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
-            // 
             // pictureBoxUi3
             // 
             this.pictureBoxUi3.BackColor = System.Drawing.Color.Red;
-            this.pictureBoxUi3.Location = new System.Drawing.Point(654, 30);
+            this.pictureBoxUi3.Location = new System.Drawing.Point(654, 1);
             this.pictureBoxUi3.Name = "pictureBoxUi3";
             this.pictureBoxUi3.Size = new System.Drawing.Size(10, 128);
             this.pictureBoxUi3.TabIndex = 7;
@@ -634,7 +572,7 @@ namespace Plumber_Game
             // pictureBoxUi4
             // 
             this.pictureBoxUi4.BackColor = System.Drawing.Color.Red;
-            this.pictureBoxUi4.Location = new System.Drawing.Point(-1, 158);
+            this.pictureBoxUi4.Location = new System.Drawing.Point(-1, 127);
             this.pictureBoxUi4.Name = "pictureBoxUi4";
             this.pictureBoxUi4.Size = new System.Drawing.Size(10, 132);
             this.pictureBoxUi4.TabIndex = 8;
@@ -644,7 +582,7 @@ namespace Plumber_Game
             // pictureBoxUi5
             // 
             this.pictureBoxUi5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.pictureBoxUi5.Location = new System.Drawing.Point(654, 158);
+            this.pictureBoxUi5.Location = new System.Drawing.Point(654, 128);
             this.pictureBoxUi5.Name = "pictureBoxUi5";
             this.pictureBoxUi5.Size = new System.Drawing.Size(10, 128);
             this.pictureBoxUi5.TabIndex = 9;
@@ -654,7 +592,7 @@ namespace Plumber_Game
             // pictureBoxUi6
             // 
             this.pictureBoxUi6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.pictureBoxUi6.Location = new System.Drawing.Point(-1, 287);
+            this.pictureBoxUi6.Location = new System.Drawing.Point(-1, 256);
             this.pictureBoxUi6.Name = "pictureBoxUi6";
             this.pictureBoxUi6.Size = new System.Drawing.Size(10, 128);
             this.pictureBoxUi6.TabIndex = 10;
@@ -664,7 +602,7 @@ namespace Plumber_Game
             // pictureBoxUi7
             // 
             this.pictureBoxUi7.BackColor = System.Drawing.Color.Yellow;
-            this.pictureBoxUi7.Location = new System.Drawing.Point(654, 287);
+            this.pictureBoxUi7.Location = new System.Drawing.Point(654, 256);
             this.pictureBoxUi7.Name = "pictureBoxUi7";
             this.pictureBoxUi7.Size = new System.Drawing.Size(10, 128);
             this.pictureBoxUi7.TabIndex = 11;
@@ -674,7 +612,7 @@ namespace Plumber_Game
             // pictureBoxUi8
             // 
             this.pictureBoxUi8.BackColor = System.Drawing.Color.Yellow;
-            this.pictureBoxUi8.Location = new System.Drawing.Point(-1, 416);
+            this.pictureBoxUi8.Location = new System.Drawing.Point(-1, 385);
             this.pictureBoxUi8.Name = "pictureBoxUi8";
             this.pictureBoxUi8.Size = new System.Drawing.Size(10, 130);
             this.pictureBoxUi8.TabIndex = 12;
@@ -684,7 +622,7 @@ namespace Plumber_Game
             // pictureBoxUi10
             // 
             this.pictureBoxUi10.BackColor = System.Drawing.Color.Lime;
-            this.pictureBoxUi10.Location = new System.Drawing.Point(654, 416);
+            this.pictureBoxUi10.Location = new System.Drawing.Point(654, 385);
             this.pictureBoxUi10.Name = "pictureBoxUi10";
             this.pictureBoxUi10.Size = new System.Drawing.Size(10, 130);
             this.pictureBoxUi10.TabIndex = 13;
@@ -694,7 +632,7 @@ namespace Plumber_Game
             // pictureBoxUi9
             // 
             this.pictureBoxUi9.BackColor = System.Drawing.Color.Lime;
-            this.pictureBoxUi9.Location = new System.Drawing.Point(-1, 547);
+            this.pictureBoxUi9.Location = new System.Drawing.Point(-1, 516);
             this.pictureBoxUi9.Name = "pictureBoxUi9";
             this.pictureBoxUi9.Size = new System.Drawing.Size(10, 133);
             this.pictureBoxUi9.TabIndex = 14;
@@ -704,7 +642,7 @@ namespace Plumber_Game
             // pictureBoxUi2
             // 
             this.pictureBoxUi2.BackColor = System.Drawing.Color.Blue;
-            this.pictureBoxUi2.Location = new System.Drawing.Point(654, 547);
+            this.pictureBoxUi2.Location = new System.Drawing.Point(654, 516);
             this.pictureBoxUi2.Name = "pictureBoxUi2";
             this.pictureBoxUi2.Size = new System.Drawing.Size(10, 133);
             this.pictureBoxUi2.TabIndex = 15;
@@ -714,38 +652,21 @@ namespace Plumber_Game
             // pictureBoxUi1
             // 
             this.pictureBoxUi1.BackColor = System.Drawing.Color.Blue;
-            this.pictureBoxUi1.Location = new System.Drawing.Point(-1, 31);
+            this.pictureBoxUi1.Location = new System.Drawing.Point(-1, -1);
             this.pictureBoxUi1.Name = "pictureBoxUi1";
             this.pictureBoxUi1.Size = new System.Drawing.Size(10, 128);
             this.pictureBoxUi1.TabIndex = 16;
             this.pictureBoxUi1.TabStop = false;
             this.pictureBoxUi1.Visible = false;
             // 
-            // pictureBox26
-            // 
-            this.pictureBox26.BackColor = System.Drawing.Color.Black;
-            this.pictureBox26.Location = new System.Drawing.Point(654, 29);
-            this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(10, 663);
-            this.pictureBox26.TabIndex = 17;
-            this.pictureBox26.TabStop = false;
-            // 
-            // pictureBox27
-            // 
-            this.pictureBox27.BackColor = System.Drawing.Color.Black;
-            this.pictureBox27.Location = new System.Drawing.Point(-1, 29);
-            this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(10, 663);
-            this.pictureBox27.TabIndex = 18;
-            this.pictureBox27.TabStop = false;
-            // 
             // PlumberGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(664, 681);
+            this.BackgroundImage = global::Plumber_Game.Properties.Resources.emptyTile;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(664, 649);
             this.Controls.Add(this.pictureBoxUi1);
             this.Controls.Add(this.pictureBoxUi2);
             this.Controls.Add(this.pictureBoxUi9);
@@ -756,14 +677,7 @@ namespace Plumber_Game
             this.Controls.Add(this.pictureBoxUi5);
             this.Controls.Add(this.pictureBoxUi4);
             this.Controls.Add(this.pictureBoxUi3);
-            this.Controls.Add(this.buttonMenu);
-            this.Controls.Add(this.labelThisLevel);
-            this.Controls.Add(this.labelTimer);
-            this.Controls.Add(this.buttonGenerate);
-            this.Controls.Add(this.buttonCheck);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.pictureBox26);
-            this.Controls.Add(this.pictureBox27);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -811,16 +725,11 @@ namespace Plumber_Game
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUi9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUi2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUi1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button buttonCheck;
-        private System.Windows.Forms.Button buttonGenerate;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -848,9 +757,6 @@ namespace Plumber_Game
         private System.Windows.Forms.PictureBox pictureBox25;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Timer timer;
-        private System.Windows.Forms.Label labelTimer;
-        private System.Windows.Forms.Label labelThisLevel;
-        private System.Windows.Forms.Button buttonMenu;
         private System.Windows.Forms.PictureBox pictureBoxUi3;
         private System.Windows.Forms.PictureBox pictureBoxUi4;
         private System.Windows.Forms.PictureBox pictureBoxUi5;
@@ -861,8 +767,6 @@ namespace Plumber_Game
         private System.Windows.Forms.PictureBox pictureBoxUi9;
         private System.Windows.Forms.PictureBox pictureBoxUi2;
         private System.Windows.Forms.PictureBox pictureBoxUi1;
-        private System.Windows.Forms.PictureBox pictureBox26;
-        private System.Windows.Forms.PictureBox pictureBox27;
     }
 }
 

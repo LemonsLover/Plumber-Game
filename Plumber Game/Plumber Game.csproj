@@ -53,11 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Character.cs">
+    <Compile Include="CharacterDisplay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Character.Designer.cs">
-      <DependentUpon>Character.cs</DependentUpon>
+    <Compile Include="CharacterDisplay.Designer.cs">
+      <DependentUpon>CharacterDisplay.cs</DependentUpon>
     </Compile>
     <Compile Include="GameField.cs" />
     <Compile Include="Level.cs" />
@@ -99,8 +99,8 @@
     <Compile Include="WinScreen.Designer.cs">
       <DependentUpon>WinScreen.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Character.resx">
-      <DependentUpon>Character.cs</DependentUpon>
+    <EmbeddedResource Include="CharacterDisplay.resx">
+      <DependentUpon>CharacterDisplay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LevelCreator.resx">
       <DependentUpon>LevelCreator.cs</DependentUpon>
