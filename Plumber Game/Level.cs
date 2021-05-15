@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace Plumber_Game
 {
-    class Level
+    public class Level
     {
         [JsonProperty("name")]
         public string Name { get; set; }

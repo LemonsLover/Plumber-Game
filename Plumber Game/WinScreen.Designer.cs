@@ -96,9 +96,8 @@ namespace Plumber_Game
             this.labelTimeLeft.AutoSize = true;
             this.labelTimeLeft.Location = new System.Drawing.Point(36, 84);
             this.labelTimeLeft.Name = "labelTimeLeft";
-            this.labelTimeLeft.Size = new System.Drawing.Size(123, 13);
+            this.labelTimeLeft.Size = new System.Drawing.Size(0, 13);
             this.labelTimeLeft.TabIndex = 4;
-            this.labelTimeLeft.Text = "Оставшаеся время: 0с";
             // 
             // labelRandomly
             // 

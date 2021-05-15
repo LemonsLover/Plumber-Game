@@ -1,23 +1,25 @@
 ﻿using Plumber_Game.Properties;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Plumber_Game
 {
     public partial class CharacterDisplay : Form
     {
-        List<Image> CharsIGS = new List<Image> { null,Resources.char_pos1, Resources.char_pos2, Resources.char_pos3 };
-        List<Image> HatsIGS = new List<Image> { null, Resources.hat_1, Resources.hat_2, Resources.hat_3, Resources.hat_4 };
+        static List<Hat> hats = new List<Hat> { null, new Hat(Resources.hat_1, 32), new Hat(Resources.hat_2, 30), new Hat(Resources.hat_3, 5), new Hat(Resources.hat_4, 28),
+        new Hat(Resources.hat_5, 20), new Hat(Resources.hat_6, 42)};
+        static List<Character> characterPos = new List<Character> { null, new Character(Resources.char_pos1, new Point(-11, 0)), new Character(Resources.char_pos2, new Point(23, 0)),
+        new Character(Resources.char_pos3, new Point(-9, 0))};
+
         Point HatLocation;
 
+        
+        public static int AvalibleHats = Properties.Settings.Default.avalibleHats;
+
         int _selectedHat = Properties.Settings.Default.selectedHat;
+        int _charPosotion = 1;
 
         public CharacterDisplay()
         {
@@ -25,7 +27,19 @@ namespace Plumber_Game
             HatLocation = pictureBoxHat.Location;
         }
 
-        public void Attach(Point Formlocation, int FormWidth = 680)
+        public static Hat UnlockHat()
+        {
+            if (AvalibleHats != hats.Count - 1)
+            {
+                Properties.Settings.Default.avalibleHats = AvalibleHats++;
+                Properties.Settings.Default.Save();
+            }
+
+            return hats[AvalibleHats];
+        }
+
+
+        public void Attach(Point Formlocation, int FormWidth)
         {
             Point gameLocation = Formlocation;
             gameLocation.X += FormWidth - 7;
@@ -37,53 +51,38 @@ namespace Plumber_Game
         {
 
             if (charID <= 0 || charID > 3)
-                this.BackgroundImage = CharsIGS[1];
+            {
+                this.BackgroundImage = characterPos[1].Image;
+                _charPosotion = 1;
+            }
             else
             {
-                
-                switch (charID)
-                {
-                    case 1: HatLocation.X = -7; break;
-                    case 2: HatLocation.X = 20; break;
-                    case 3: HatLocation.X = 2; break;
-                    default: break;
-                }
+                _charPosotion = charID;
+
+                HatLocation = characterPos[charID].HeadLocation;
+                HatLocation.Y -= hats[_selectedHat].HatHight;
+
                 pictureBoxHat.Location = HatLocation;
-                this.BackgroundImage = CharsIGS[charID];
+                this.BackgroundImage = characterPos[charID].Image;
             }
-
-
-                   
         }
 
-        public void ChangeCharsHat(int hatID)
+        public void ChangeCharsHat()
         {
+            HatLocation = characterPos[_charPosotion].HeadLocation;
+            HatLocation.Y -= hats[_selectedHat].HatHight;
 
-            if (hatID <= 0 || hatID > HatsIGS.Count-1)
-                this.BackgroundImage = HatsIGS[1];
-            else
-            {
-
-                switch (hatID)
-                {
-                    case 1: HatLocation.Y = -45; break;
-                    case 2: HatLocation.Y = -38; break;
-                    case 3: HatLocation.Y = -15; break;
-                    case 4: HatLocation.Y = -25; break;
-                    default: break;
-                }
-                pictureBoxHat.Location = HatLocation;
-                pictureBoxHat.BackgroundImage = HatsIGS[hatID];
-                Properties.Settings.Default.selectedHat = hatID;
-                Properties.Settings.Default.Save();
-            }
+            pictureBoxHat.Location = HatLocation;
+            pictureBoxHat.BackgroundImage = hats[_selectedHat].Image;
+            Properties.Settings.Default.selectedHat = _selectedHat;
+            Properties.Settings.Default.Save();
         }
 
         private void Character_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.DarkGray;
             this.TransparencyKey = Color.DarkGray;
-            ChangeCharsHat(_selectedHat);
+            ChangeCharsHat();
         }
 
 
@@ -91,14 +90,20 @@ namespace Plumber_Game
         {
             Application.Exit();
         }
-        
+
         private void Character_Click(object sender, EventArgs e)
         {
-            _selectedHat++;
-            if (_selectedHat == HatsIGS.Count)
-                ChangeCharsHat(_selectedHat = 1);
+
+            if (_selectedHat >= AvalibleHats)
+            {
+                _selectedHat = 1;
+                ChangeCharsHat();
+            }
             else
-                ChangeCharsHat(_selectedHat);
+            {
+                _selectedHat++;
+                ChangeCharsHat();
+            }
         }
     }
 }

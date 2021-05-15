@@ -76,3 +76,4 @@ C:\University\OOP\plumber\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Releas
 D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\bin\Release\Newtonsoft.Json.dll
 D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\bin\Release\Newtonsoft.Json.xml
 D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Release\Plumber_Game.CharacterDisplay.resources
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Release\Plumber_Game.UnlocksDisplay.resources

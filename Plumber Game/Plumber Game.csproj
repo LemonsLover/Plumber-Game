@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Character.cs" />
     <Compile Include="CharacterDisplay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +61,7 @@
       <DependentUpon>CharacterDisplay.cs</DependentUpon>
     </Compile>
     <Compile Include="GameField.cs" />
+    <Compile Include="Hat.cs" />
     <Compile Include="Level.cs" />
     <Compile Include="LevelCreator.cs">
       <SubType>Form</SubType>
@@ -93,6 +95,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Sprite.cs" />
+    <Compile Include="UnlocksDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnlocksDisplay.Designer.cs">
+      <DependentUpon>UnlocksDisplay.cs</DependentUpon>
+    </Compile>
     <Compile Include="WinScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +127,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnlocksDisplay.resx">
+      <DependentUpon>UnlocksDisplay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WinScreen.resx">
       <DependentUpon>WinScreen.cs</DependentUpon>
@@ -150,6 +162,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="PlumberGameIco.ico" />
+    <None Include="Resources\hat_6.png" />
+    <None Include="Resources\hat_5.png" />
     <None Include="Resources\Tube_horizontal_disabled.png" />
     <None Include="Resources\Tube_vertical_disabled.png" />
     <None Include="Resources\Knee_left_up_disabled.png" />

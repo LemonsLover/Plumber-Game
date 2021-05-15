@@ -44,7 +44,7 @@ namespace Plumber_Game
 
         private void buttonLevelRandom_Click(object sender, EventArgs e)
         {
-            Levels.CorrectLevel = 0;
+            Levels.CorrectLevelId = 0;
             Levels.ChangeCorrectLevelList(false);
             new PlumberGame().Show();
             this.Hide();
@@ -52,7 +52,7 @@ namespace Plumber_Game
 
         private void buttonLevel_Click(object sender, EventArgs e)
         {
-            Levels.CorrectLevel = int.Parse(((Button)sender).Text);
+            Levels.CorrectLevelId = int.Parse(((Button)sender).Text);
             Levels.ChangeCorrectLevelList(false);
             new PlumberGame().Show();
             this.Hide();
@@ -66,7 +66,7 @@ namespace Plumber_Game
 
         private void buttonLevelRandom_Click_1(object sender, EventArgs e)
         {
-            Levels.CorrectLevel = rnd.Next(1, Levels.AvailableLevel);
+            Levels.CorrectLevelId = rnd.Next(1, Levels.AvailableLevel);
             Levels.ChangeCorrectLevelList(false);
             new PlumberGame().Show();
             this.Hide();
@@ -74,7 +74,7 @@ namespace Plumber_Game
 
         private void comboBoxCustomLevels_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Levels.CorrectLevel = comboBoxCustomLevels.SelectedIndex;
+            Levels.CorrectLevelId = comboBoxCustomLevels.SelectedIndex;
             Levels.ChangeCorrectLevelList(true);
             new PlumberGame().Show();
             this.Hide();

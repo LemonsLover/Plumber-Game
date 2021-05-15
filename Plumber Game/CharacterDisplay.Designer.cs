@@ -40,12 +40,12 @@ namespace Plumber_Game
             this.pictureBoxHat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBoxHat.Location = new System.Drawing.Point(0, -45);
             this.pictureBoxHat.Name = "pictureBoxHat";
-            this.pictureBoxHat.Size = new System.Drawing.Size(150, 200);
+            this.pictureBoxHat.Size = new System.Drawing.Size(140, 190);
             this.pictureBoxHat.TabIndex = 1;
             this.pictureBoxHat.TabStop = false;
             this.pictureBoxHat.Click += new System.EventHandler(this.Character_Click);
             // 
-            // Character
+            // CharacterDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -55,7 +55,7 @@ namespace Plumber_Game
             this.Controls.Add(this.pictureBoxHat);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Character";
+            this.Name = "CharacterDisplay";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Character";

@@ -432,9 +432,9 @@ namespace Plumber_Game
 
                 if (noClip && !firstTileIsStart)
                 {
-                    if ((tile.Image == TilesIcons[9] || tile.Image == TilesIcons[16]) && nextLeftTile == TilesIcons[3] && previousI == firstTileId)
+                    if ((tile.Image == TilesIcons[9] || tile.Image == TilesIcons[16]) && nextLeftTile == TilesIcons[3] && previousI == firstTileId && i == firstTileId)
                         break;
-                    if ((tile.Image == TilesIcons[8] || tile.Image == TilesIcons[15]) && nextLeftTile == TilesIcons[3] && previousI == firstTileId + 5)
+                    if ((tile.Image == TilesIcons[8] || tile.Image == TilesIcons[15]) && nextLeftTile == TilesIcons[3] && previousI == firstTileId + 5 && i == firstTileId)
                         break;
 
                     if ((tile.Image == TilesIcons[9] || tile.Image == TilesIcons[16]) && i == firstTileId && lastTile == TilesIcons[3] && previousI == i + 1)

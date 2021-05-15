@@ -19,7 +19,7 @@ namespace Plumber_Game
         public PlumberGame()
         {
             InitializeComponent();
-            gameField = new GameField(tableLayoutPanel1, Levels.CorrectLevel);
+            gameField = new GameField(tableLayoutPanel1, Levels.CorrectLevelId);
         }
 
 
@@ -27,9 +27,9 @@ namespace Plumber_Game
         {
 
             time = 60;
-            this.Text = $"Plumber game | Уровень {Levels.CorrectlevelList[Levels.CorrectLevel].Name}";
+            this.Text = $"Plumber game | Уровень {Levels.CorrectlevelList[Levels.CorrectLevelId].Name}";
 
-            noClip = Levels.CorrectlevelList[Levels.CorrectLevel].isNoClip;
+            noClip = Levels.CorrectlevelList[Levels.CorrectLevelId].isNoClip;
             
 
             if (!noClip)
@@ -59,31 +59,31 @@ namespace Plumber_Game
                 pictureBoxUi10.Visible = true;
             }
 
-            if (Levels.AvailableLevel == 1 && Levels.CorrectLevel == 1 && !Levels.CorrectlevelList[Levels.CorrectLevel].IsCastom)
+            if (Levels.AvailableLevel == 1 && Levels.CorrectLevelId == 1 && !Levels.CorrectlevelList[Levels.CorrectLevelId].IsCastom)
                 MessageBox.Show("В этой игре тебе нужно вжится в роль водопроводчика и соеденить начало и конец водопровода за отведенное время. Удачи !", "Привет !",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            if (Levels.AvailableLevel == 6 && Levels.CorrectLevel == 6 && !Levels.CorrectlevelList[Levels.CorrectLevel].IsCastom)
+            if (Levels.AvailableLevel == 6 && Levels.CorrectLevelId == 6 && !Levels.CorrectlevelList[Levels.CorrectLevelId].IsCastom)
                 MessageBox.Show("Начиная с этого уровня тебе будут иногда попадатся пустые клетки без труб. Удачи !", "Поздравляю !",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            if (Levels.AvailableLevel == 11 && Levels.CorrectLevel == 11 && !Levels.CorrectlevelList[Levels.CorrectLevel].IsCastom)
+            if (Levels.AvailableLevel == 11 && Levels.CorrectLevelId == 11 && !Levels.CorrectlevelList[Levels.CorrectLevelId].IsCastom)
                 MessageBox.Show("Ты прошел ещё 1 ряд ! Теперь некоторые из труб вращать нельзя ! Удачи !", "Поздравляю !",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            if (Levels.AvailableLevel == 16 && Levels.CorrectLevel == 16 && !Levels.CorrectlevelList[Levels.CorrectLevel].IsCastom)
+            if (Levels.AvailableLevel == 16 && Levels.CorrectLevelId == 16 && !Levels.CorrectlevelList[Levels.CorrectLevelId].IsCastom)
             {
                 MessageBox.Show("Ты подошел к финишной прямой, это последний ряд уровней ! Теперь труба переходит в одинаковые цвета по краям!", "Поздравляю !",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
-            timer.Enabled = Levels.CorrectlevelList[Levels.CorrectLevel].isOnTime;
+            timer.Enabled = Levels.CorrectlevelList[Levels.CorrectLevelId].isOnTime;
             this.Enabled = true;
-            gameField.Update(Levels.CorrectlevelList[Levels.CorrectLevel], Levels.CorrectLevel);
+            gameField.Update(Levels.CorrectlevelList[Levels.CorrectLevelId], Levels.CorrectLevelId);
 
             
             character.Show();
-            character.Attach(this.Location);
+            character.Attach(this.Location, this.Width);
             character.ChangeCharPosition(1);
         }
 
@@ -99,7 +99,7 @@ namespace Plumber_Game
                 this.Enabled = false;
                 timer.Enabled = false;
                 character.ChangeCharPosition(2);
-                new WinScreen().ShowDialog();
+                new WinScreen(Levels.CorrectlevelList[Levels.CorrectLevelId]).ShowDialog();
                 this.Hide();
                 character.Hide();
             }
@@ -114,7 +114,7 @@ namespace Plumber_Game
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            this.Text = $"Plumber game | Уровень {Levels.CorrectlevelList[Levels.CorrectLevel].Name} | Осталось времени: {--time}";
+            this.Text = $"Plumber game | Уровень {Levels.CorrectlevelList[Levels.CorrectLevelId].Name} | Осталось времени: {--time}";
             if (time == 0)
             {
                 this.Enabled = false;
@@ -137,7 +137,7 @@ namespace Plumber_Game
 
         private void PlumberGame_LocationChanged(object sender, EventArgs e)
         {
-            character.Attach(this.Location);
+            character.Attach(this.Location, this.Width);
         }
     }
 }

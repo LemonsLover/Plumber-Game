@@ -46,5 +46,17 @@ namespace Plumber_Game.Properties {
                 this["selectedHat"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int avalibleHats {
+            get {
+                return ((int)(this["avalibleHats"]));
+            }
+            set {
+                this["avalibleHats"] = value;
+            }
+        }
     }
 }

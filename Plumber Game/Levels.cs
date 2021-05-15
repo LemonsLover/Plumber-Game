@@ -141,7 +141,7 @@ namespace Plumber_Game
         public static List<Level> CorrectlevelList = GameLevelsList;
 
         public static int LevelAmount = Levels.GameLevelsList.Count - 1;
-        public static int CorrectLevel = 1;
+        public static int CorrectLevelId = 1;
         public static int AvailableLevel = Properties.Settings.Default.avalibleLevel;
 
         static Levels()
