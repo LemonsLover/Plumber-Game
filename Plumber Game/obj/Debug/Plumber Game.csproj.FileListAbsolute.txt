@@ -1,0 +1,50 @@
+C:\Users\Yehor\source\repos\Plumber Game\Plumber Game\bin\Debug\Plumber Game.exe.config
+C:\Users\Yehor\source\repos\Plumber Game\Plumber Game\bin\Debug\Plumber Game.exe
+C:\Users\Yehor\source\repos\Plumber Game\Plumber Game\bin\Debug\Plumber Game.pdb
+C:\Users\Yehor\source\repos\Plumber Game\Plumber Game\obj\Debug\Plumber Game.csprojAssemblyReference.cache
+C:\Users\Yehor\source\repos\Plumber Game\Plumber Game\obj\Debug\Plumber_Game.Properties.Resources.resources
+C:\Users\Yehor\source\repos\Plumber Game\Plumber Game\obj\Debug\Plumber Game.csproj.GenerateResource.cache
+C:\Users\Yehor\source\repos\Plumber Game\Plumber Game\obj\Debug\Plumber Game.csproj.CoreCompileInputs.cache
+C:\Users\Yehor\source\repos\Plumber Game\Plumber Game\obj\Debug\Plumber Game.exe
+C:\Users\Yehor\source\repos\Plumber Game\Plumber Game\obj\Debug\Plumber Game.pdb
+C:\Users\Yehor\source\repos\Plumber Game\Plumber Game\obj\Debug\Plumber_Game.LevelSelect.resources
+C:\Users\Yehor\source\repos\Plumber Game\Plumber Game\obj\Debug\Plumber_Game.PlumberGame.resources
+C:\Users\Yehor\source\repos\Plumber Game\Plumber Game\obj\Debug\Plumber_Game.WinScreen.resources
+C:\Users\Yehor\source\repos\Plumber Game\Plumber Game\obj\Debug\Plumber_Game.Menu.resources
+C:\Users\Yehor\Desktop\dasdasfasdas\plumber-game-by-yehor-ovseukov\Plumber Game\bin\Debug\Plumber Game.exe.config
+C:\Users\Yehor\Desktop\dasdasfasdas\plumber-game-by-yehor-ovseukov\Plumber Game\bin\Debug\Plumber Game.exe
+C:\Users\Yehor\Desktop\dasdasfasdas\plumber-game-by-yehor-ovseukov\Plumber Game\bin\Debug\Plumber Game.pdb
+C:\Users\Yehor\Desktop\dasdasfasdas\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber Game.csprojAssemblyReference.cache
+C:\Users\Yehor\Desktop\dasdasfasdas\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber_Game.LevelSelect.resources
+C:\Users\Yehor\Desktop\dasdasfasdas\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber_Game.Menu.resources
+C:\Users\Yehor\Desktop\dasdasfasdas\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber_Game.PlumberGame.resources
+C:\Users\Yehor\Desktop\dasdasfasdas\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber_Game.Properties.Resources.resources
+C:\Users\Yehor\Desktop\dasdasfasdas\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber_Game.WinScreen.resources
+C:\Users\Yehor\Desktop\dasdasfasdas\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber Game.csproj.GenerateResource.cache
+C:\Users\Yehor\Desktop\dasdasfasdas\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber Game.csproj.CoreCompileInputs.cache
+C:\Users\Yehor\Desktop\dasdasfasdas\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber Game.exe
+C:\Users\Yehor\Desktop\dasdasfasdas\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber Game.pdb
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\bin\Debug\Plumber Game.exe.config
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\bin\Debug\Plumber Game.exe
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\bin\Debug\Plumber Game.pdb
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber Game.csprojAssemblyReference.cache
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber_Game.LevelSelect.resources
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber_Game.Menu.resources
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber_Game.PlumberGame.resources
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber_Game.Properties.Resources.resources
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber_Game.WinScreen.resources
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber Game.csproj.GenerateResource.cache
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber Game.csproj.CoreCompileInputs.cache
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber Game.exe
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber Game.pdb
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\bin\Debug\System.Text.Json.dll
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\bin\Debug\System.Memory.dll
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\bin\Debug\System.Text.Encodings.Web.dll
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\bin\Debug\System.Numerics.Vectors.dll
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\bin\Debug\System.Buffers.dll
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber Game.exe.config
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber Game.csproj.CopyComplete
+D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Debug\Plumber_Game.LevelCreator.resources
