@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Plumber_Game.Character" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Character.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plumber_Game.GameField" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAgAEAAAAAAAAAAAQAAAAABABBAAAAAAAAIAgAA=</HashCode>
+      <FileName>Classes\GameField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plumber_Game.Hat" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Classes\Hat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plumber_Game.Level" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAARAAAAAAAAAQAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Level.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plumber_Game.Levels" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAACAAIAAAAEAAAAIMAIAAQAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Levels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plumber_Game.Sprite" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAIAAAAAAEAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Sprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plumber_Game.CharacterDisplay" Collapsed="true">
+    <Position X="10.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAgAACAAAAAAkACEAAhCAgAAEAACEAAAIACAAAA=</HashCode>
+      <FileName>Forms\CharacterDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plumber_Game.LevelCreator" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIK5TMOyAAgRAkQJCE0AgHFAEgIAgERBAqBABiAAA=</HashCode>
+      <FileName>Forms\LevelCreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plumber_Game.LevelSelect" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAEACAAwz8ABBIgAkCAAAACAAEAAAAAAAIAAQAgAAQ=</HashCode>
+      <FileName>Forms\LevelSelect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plumber_Game.Menu" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAQAADACAAABAAIASAAACCAAAIAAAAAFAAIAAAEAA=</HashCode>
+      <FileName>Forms\Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plumber_Game.PlumberGame" Collapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQJIhDMOyAAAQAgAAiAQAACAQAABABBQEQgAAJAACA=</HashCode>
+      <FileName>Forms\PlumberGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plumber_Game.UnlocksDisplay" Collapsed="true">
+    <Position X="8.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAAACAAAAAAAAAAEAAABAAAA=</HashCode>
+      <FileName>Forms\UnlocksDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plumber_Game.WinScreen" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAEQQACBCAEAAAACAKgEAACAAEAAAABAAgQAAAggAA=</HashCode>
+      <FileName>Forms\WinScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plumber_Game.Program" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plumber_Game.Properties.Resources" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIUEAEQFAIVFAAoBBABEAEAAQACABAIABAACADCAMA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plumber_Game.Properties.Settings" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAIAAAAABBAAAAAAAAABAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

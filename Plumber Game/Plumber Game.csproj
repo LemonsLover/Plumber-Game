@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>PlumberGameIco.ico</ApplicationIcon>
+    <ApplicationIcon>Forms\PlumberGameIco.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -53,39 +53,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Character.cs" />
-    <Compile Include="CharacterDisplay.cs">
+    <Compile Include="Classes\Character.cs" />
+    <Compile Include="Forms\CharacterDisplay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CharacterDisplay.Designer.cs">
+    <Compile Include="Forms\CharacterDisplay.Designer.cs">
       <DependentUpon>CharacterDisplay.cs</DependentUpon>
     </Compile>
-    <Compile Include="GameField.cs" />
-    <Compile Include="Hat.cs" />
-    <Compile Include="Level.cs" />
-    <Compile Include="LevelCreator.cs">
+    <Compile Include="Classes\GameField.cs" />
+    <Compile Include="Classes\Hat.cs" />
+    <Compile Include="Classes\Level.cs" />
+    <Compile Include="Forms\LevelCreator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LevelCreator.Designer.cs">
+    <Compile Include="Forms\LevelCreator.Designer.cs">
       <DependentUpon>LevelCreator.cs</DependentUpon>
     </Compile>
-    <Compile Include="Levels.cs" />
-    <Compile Include="LevelSelect.cs">
+    <Compile Include="Classes\Levels.cs" />
+    <Compile Include="Forms\LevelSelect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LevelSelect.Designer.cs">
+    <Compile Include="Forms\LevelSelect.Designer.cs">
       <DependentUpon>LevelSelect.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="Forms\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
+    <Compile Include="Forms\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="PlumberGame.cs">
+    <Compile Include="Forms\PlumberGame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PlumberGame.Designer.cs">
+    <Compile Include="Forms\PlumberGame.Designer.cs">
       <DependentUpon>PlumberGame.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -95,32 +95,32 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Sprite.cs" />
-    <Compile Include="UnlocksDisplay.cs">
+    <Compile Include="Classes\Sprite.cs" />
+    <Compile Include="Forms\UnlocksDisplay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UnlocksDisplay.Designer.cs">
+    <Compile Include="Forms\UnlocksDisplay.Designer.cs">
       <DependentUpon>UnlocksDisplay.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinScreen.cs">
+    <Compile Include="Forms\WinScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinScreen.Designer.cs">
+    <Compile Include="Forms\WinScreen.Designer.cs">
       <DependentUpon>WinScreen.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CharacterDisplay.resx">
+    <EmbeddedResource Include="Forms\CharacterDisplay.resx">
       <DependentUpon>CharacterDisplay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LevelCreator.resx">
+    <EmbeddedResource Include="Forms\LevelCreator.resx">
       <DependentUpon>LevelCreator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LevelSelect.resx">
+    <EmbeddedResource Include="Forms\LevelSelect.resx">
       <DependentUpon>LevelSelect.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
+    <EmbeddedResource Include="Forms\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PlumberGame.resx">
+    <EmbeddedResource Include="Forms\PlumberGame.resx">
       <DependentUpon>PlumberGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -128,12 +128,13 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UnlocksDisplay.resx">
+    <EmbeddedResource Include="Forms\UnlocksDisplay.resx">
       <DependentUpon>UnlocksDisplay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinScreen.resx">
+    <EmbeddedResource Include="Forms\WinScreen.resx">
       <DependentUpon>WinScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -161,7 +162,7 @@
     <None Include="Resources\PlumberGameIco.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="PlumberGameIco.ico" />
+    <Content Include="Forms\PlumberGameIco.ico" />
     <None Include="Resources\hat_6.png" />
     <None Include="Resources\hat_5.png" />
     <None Include="Resources\Tube_horizontal_disabled.png" />
