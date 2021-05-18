@@ -136,7 +136,7 @@ namespace Plumber_Game
         private void ValidateLevel()
         {
             int exitsAmount = 0;
-            int[] level = new int[tableLayoutPanelPlayground.Controls.Count];
+            int[] newLevel = new int[tableLayoutPanelPlayground.Controls.Count];
 
             for (int i = 0; i < tableLayoutPanelPlayground.Controls.Count; i++)
             {
@@ -146,7 +146,7 @@ namespace Plumber_Game
                 for (byte j = 0; j < TilesIcons.Count; j++)
                 {
                     if (tile.Image == TilesIcons[j])
-                        level[i] = j;
+                        newLevel[i] = j;
 
                 }
 
@@ -163,9 +163,14 @@ namespace Plumber_Game
             {
                 try
                 {
-                    Levels.AddLevel(new Level(textBoxLevelName.Text, level, true, checkBoxNoClip.Checked, checkBoxOnTime.Checked));
+                    foreach (Level oldLevel in Levels.CastomLevelsList)
+                    {
+                        if (oldLevel.Name == textBoxLevelName.Text)
+                            throw new Exception("Уровень с таким названием уже существует !");
+                    }
+                    Levels.AddLevel(new Level(textBoxLevelName.Text, newLevel, true, checkBoxNoClip.Checked, checkBoxOnTime.Checked));
                     character.ChangeCharPosition(2);
-                    MessageBox.Show($"Уровень был успешно сошранен !", "Успех !");
+                    MessageBox.Show($"Уровень был успешно сохранен !", "Успех !");
                     character.ChangeCharPosition(3);
 
                     textBoxLevelName.Text = "castomLevel" + Levels.CastomLevelsList.Count;

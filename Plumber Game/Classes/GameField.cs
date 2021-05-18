@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Plumber_Game
@@ -12,7 +9,7 @@ namespace Plumber_Game
     class GameField
     {
         public static int amountOfConections = 0;
-        public static bool noClip { get; set; } = false;
+        public static bool noClip = false;
 
         public int CorrectLevel = 1;
 
@@ -61,25 +58,13 @@ namespace Plumber_Game
                     tile.Image = TilesIcons[Level.LevelArr[i]];
                     if (Level.LevelArr[i] == 0)
                     {
-                        if (CorrectLevel == 0 || CorrectLevel > 15)
+                        if (CorrectLevel == 0 || CorrectLevel > 15 || Level.IsCastom)
                         {
                             int rand = rnd.Next(0, 101);
                             if (rand >= 0 && rand <= 80)
                                 tile.Image = TilesIcons[rnd.Next(5, 11)];
                             else if (rand >= 80 && rand < 90)
                                 tile.Image = TilesIcons[rnd.Next(12, 18)];
-                            else
-                                tile.Image = TilesIcons[11];
-                        }
-
-                        else if (CorrectLevel <= 5)
-                            tile.Image = TilesIcons[rnd.Next(5, 11)];
-
-                        else if (CorrectLevel > 5 && CorrectLevel <= 10)
-                        {
-                            int rand = rnd.Next(0, 101);
-                            if (rand <= 90)
-                                tile.Image = TilesIcons[rnd.Next(5, 11)];
                             else
                                 tile.Image = TilesIcons[11];
                         }
@@ -93,13 +78,23 @@ namespace Plumber_Game
                             else
                                 tile.Image = TilesIcons[11];
                         }
+                        else if (CorrectLevel > 5 && CorrectLevel <= 10)
+                        {
+                            int rand = rnd.Next(0, 101);
+                            if (rand <= 90)
+                                tile.Image = TilesIcons[rnd.Next(5, 11)];
+                            else
+                                tile.Image = TilesIcons[11];
+                        }
+                        else if (CorrectLevel <= 5)
+                            tile.Image = TilesIcons[rnd.Next(5, 11)]; 
                     }
                 }
             } while (!Check(noClip) && CorrectLevel == 0 && !Level.IsCastom);
-            RollTilesGently();
+            RollTiles();
         }
 
-        private void RollTilesGently()
+        private void RollTiles()
         {
             for (int i = 0; i < Field.Controls.Count; i++)
             {

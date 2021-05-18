@@ -63,6 +63,8 @@ namespace Plumber_Game
             Properties.Settings.Default.avalibleHats = 1;
             Properties.Settings.Default.avalibleLevel = 1;
             Properties.Settings.Default.selectedHat = 1;
+            Properties.Settings.Default.Save();
+
             buttonClearProgress.Visible = false;
         }
     }
