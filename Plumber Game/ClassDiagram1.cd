@@ -10,7 +10,7 @@
   <Class Name="Plumber_Game.GameField" Collapsed="true">
     <Position X="7.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQEAAgAEAAAAAAAAAAAQAAAAABABBAAAAAAAAIAgAA=</HashCode>
+      <HashCode>AAQEAAgAEAAAAAAAAAAAAAAAAABABBAAAAAAAAIAgEA=</HashCode>
       <FileName>Classes\GameField.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -43,7 +43,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Plumber_Game.CharacterDisplay" Collapsed="true">
-    <Position X="7" Y="4.25" Width="1.5" />
+    <Position X="6.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAgAACAAAAAAkACEAAhCAoAAEAACEAAAIACAAAA=</HashCode>
       <FileName>Forms\CharacterDisplay.cs</FileName>
@@ -78,7 +78,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Plumber_Game.UnlocksDisplay" Collapsed="true">
-    <Position X="5.25" Y="4.25" Width="1.5" />
+    <Position X="4.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAABAAAACAAAACAAAAAAAAAAEAAABAAAA=</HashCode>
       <FileName>Forms\UnlocksDisplay.cs</FileName>
@@ -92,20 +92,20 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Plumber_Game.Program" Collapsed="true">
-    <Position X="11.25" Y="3.25" Width="1.5" />
+    <Position X="10.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Plumber_Game.Properties.Resources" Collapsed="true">
-    <Position X="10" Y="4.25" Width="1.5" />
+    <Position X="9" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACIUEAEQFAIVFAAoBBABEAEAAQACABAIABAACADCAMA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="Plumber_Game.Properties.Settings" Collapsed="true">
-    <Position X="11.75" Y="4.25" Width="1.5" />
+    <Position X="11" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAABAAAAAAAIAAAAABBAAAAAAAAABAAAAA=</HashCode>
     </TypeIdentifier>

@@ -26,3 +26,31 @@ D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Release\Plumbe
 D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Release\Plumber Game.exe
 D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Release\Plumber Game.pdb
 D:\University\OOP\plumber-game-by-yehor-ovseukov\Plumber Game\obj\Release\Plumber Game.csprojAssemblyReference.cache
+C:\University\OOP\plumber-game\Plumber Game\bin\Release\Plumber Game.exe.config
+C:\University\OOP\plumber-game\Plumber Game\bin\Release\Plumber Game.exe
+C:\University\OOP\plumber-game\Plumber Game\bin\Release\Plumber Game.pdb
+C:\University\OOP\plumber-game\Plumber Game\bin\Release\Newtonsoft.Json.dll
+C:\University\OOP\plumber-game\Plumber Game\bin\Release\System.Text.Json.dll
+C:\University\OOP\plumber-game\Plumber Game\bin\Release\System.Memory.dll
+C:\University\OOP\plumber-game\Plumber Game\bin\Release\System.Text.Encodings.Web.dll
+C:\University\OOP\plumber-game\Plumber Game\bin\Release\System.Numerics.Vectors.dll
+C:\University\OOP\plumber-game\Plumber Game\bin\Release\System.Threading.Tasks.Extensions.dll
+C:\University\OOP\plumber-game\Plumber Game\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+C:\University\OOP\plumber-game\Plumber Game\bin\Release\System.Buffers.dll
+C:\University\OOP\plumber-game\Plumber Game\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\University\OOP\plumber-game\Plumber Game\bin\Release\Newtonsoft.Json.xml
+C:\University\OOP\plumber-game\Plumber Game\obj\Release\Plumber Game.csprojAssemblyReference.cache
+C:\University\OOP\plumber-game\Plumber Game\obj\Release\Plumber Game.exe.config
+C:\University\OOP\plumber-game\Plumber Game\obj\Release\Plumber_Game.CharacterDisplay.resources
+C:\University\OOP\plumber-game\Plumber Game\obj\Release\Plumber_Game.LevelCreator.resources
+C:\University\OOP\plumber-game\Plumber Game\obj\Release\Plumber_Game.LevelSelect.resources
+C:\University\OOP\plumber-game\Plumber Game\obj\Release\Plumber_Game.Menu.resources
+C:\University\OOP\plumber-game\Plumber Game\obj\Release\Plumber_Game.PlumberGame.resources
+C:\University\OOP\plumber-game\Plumber Game\obj\Release\Plumber_Game.Properties.Resources.resources
+C:\University\OOP\plumber-game\Plumber Game\obj\Release\Plumber_Game.UnlocksDisplay.resources
+C:\University\OOP\plumber-game\Plumber Game\obj\Release\Plumber_Game.WinScreen.resources
+C:\University\OOP\plumber-game\Plumber Game\obj\Release\Plumber Game.csproj.GenerateResource.cache
+C:\University\OOP\plumber-game\Plumber Game\obj\Release\Plumber Game.csproj.CoreCompileInputs.cache
+C:\University\OOP\plumber-game\Plumber Game\obj\Release\Plumber Game.csproj.CopyComplete
+C:\University\OOP\plumber-game\Plumber Game\obj\Release\Plumber Game.exe
+C:\University\OOP\plumber-game\Plumber Game\obj\Release\Plumber Game.pdb
