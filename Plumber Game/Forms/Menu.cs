@@ -53,19 +53,28 @@ namespace Plumber_Game
                 buttonClearProgress.Visible = false;
         }
 
-        private void labelMenu_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Спасибо Васьковському Виталику моральную потдержку !", "Пасибос !", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
         private void buttonClearProgress_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.avalibleHats = 1;
             Properties.Settings.Default.avalibleLevel = 1;
             Properties.Settings.Default.selectedHat = 1;
             Properties.Settings.Default.Save();
+            Application.Restart();
 
             buttonClearProgress.Visible = false;
+        }
+
+        private void buttonExit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.P)
+                if (DialogResult.Yes == MessageBox.Show("Вы хотите заблокировать весь контент ?", "ЧИТЫ !", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                {
+                    Properties.Settings.Default.avalibleHats = 4;
+                    Properties.Settings.Default.avalibleLevel = 18;
+                    Properties.Settings.Default.selectedHat = 1;
+                    Properties.Settings.Default.Save();
+                    Application.Restart();
+                }     
         }
     }
 }

@@ -10,15 +10,15 @@ namespace Plumber_Game
     public class Level
     {
         [JsonProperty("name")]
-        public string Name { get; set; }
+        public string Name;
         [JsonProperty("levelArr")]
-        public int[] LevelArr { get; set; }
+        public int[] LevelArr;
         [JsonProperty("isCastom")]
-        public bool IsCastom { get; set; }
+        public readonly bool IsCastom;
         [JsonProperty("isNoClip")]
-        public bool isNoClip { get; set; }
+        public readonly bool isNoClip;
         [JsonProperty("isOnTime")]
-        public bool isOnTime { get; set; }
+        public readonly bool isOnTime;
 
 
         public Level(string Name, int[] LevelArr, bool isCastom = false, bool isNoClip = false, bool isOnTime = true)

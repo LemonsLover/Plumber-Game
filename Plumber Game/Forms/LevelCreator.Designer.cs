@@ -779,7 +779,6 @@ namespace Plumber_Game
             this.label6.Size = new System.Drawing.Size(258, 13);
             this.label6.TabIndex = 23;
             this.label6.Text = "*На правую кнопку можно удалять трубу !";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // pictureBoxUi1
             // 

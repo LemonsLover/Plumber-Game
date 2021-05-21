@@ -60,7 +60,6 @@ namespace Plumber_Game
             this.labelMenu.Size = new System.Drawing.Size(105, 31);
             this.labelMenu.TabIndex = 1;
             this.labelMenu.Text = "МЕНЮ";
-            this.labelMenu.Click += new System.EventHandler(this.labelMenu_Click);
             // 
             // buttonLevelSelect
             // 
@@ -85,6 +84,7 @@ namespace Plumber_Game
             this.buttonExit.Text = "ВЫХОД";
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.button3_Click);
+            this.buttonExit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.buttonExit_KeyPress);
             // 
             // label1
             // 
@@ -133,6 +133,7 @@ namespace Plumber_Game
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(300, 300);
             this.MinimizeBox = false;

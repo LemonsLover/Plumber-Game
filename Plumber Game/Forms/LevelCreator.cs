@@ -73,11 +73,6 @@ namespace Plumber_Game
             FillEmptyWithRandom();
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Спасибо Владу Мурсалову за подсказку !", "Пасибос !", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
         private void menuSwaper()
         {
             if (selectedTileId < 0)
