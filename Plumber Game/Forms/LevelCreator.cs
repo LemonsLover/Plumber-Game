@@ -153,7 +153,7 @@ namespace Plumber_Game
             if (exitsAmount < 2)
                 MessageBox.Show("Не достаточно выходов ! Их должно быть 2 !");
             else if (exitsAmount > 2)
-                MessageBox.Show("Много выходов выходов ! Их должно быть 2 !");
+                MessageBox.Show("Много выходов ! Их должно быть 2 !");
             else
             {
                 try
@@ -200,8 +200,6 @@ namespace Plumber_Game
             character.Attach(this.Location, this.Width);
         }
 
-
-
         private void checkBoxNoClip_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxNoClip.Checked)
@@ -230,6 +228,11 @@ namespace Plumber_Game
                 pictureBoxUi9.Visible = false;
                 pictureBoxUi10.Visible = false;
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Спасибо Владу Мурсалову за подсказку !", "Пасибос !", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

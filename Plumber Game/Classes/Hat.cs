@@ -8,25 +8,13 @@ using System.Threading.Tasks;
 namespace Plumber_Game
 {
     public class Hat : Sprite
-    {
-        int hatHight;
-        
-        public int HatHight
-        {
-            get
-            {
-                return hatHight;
-            }
-            set
-            {
-                hatHight = value;
-            }
-        }
+    {        
+        public int HatHight { get; set; }
 
         public Hat(Image HatImage, int HatHight)
             : base(HatImage)
         {
-            this.hatHight = HatHight;
+            this.HatHight = HatHight;
         }
     }
 }

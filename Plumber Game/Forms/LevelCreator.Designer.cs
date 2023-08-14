@@ -606,7 +606,7 @@ namespace Plumber_Game
             this.labelTileId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTileId.Location = new System.Drawing.Point(811, 161);
             this.labelTileId.Name = "labelTileId";
-            this.labelTileId.Size = new System.Drawing.Size(37, 16);
+            this.labelTileId.Size = new System.Drawing.Size(36, 16);
             this.labelTileId.TabIndex = 5;
             this.labelTileId.Text = "Id: 1";
             // 
@@ -687,11 +687,11 @@ namespace Plumber_Game
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(906, 70);
+            this.label2.Location = new System.Drawing.Point(903, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 16);
+            this.label2.Size = new System.Drawing.Size(84, 16);
             this.label2.TabIndex = 15;
-            this.label2.Text = "BEFORE";
+            this.label2.Text = "PREVIOUS";
             // 
             // label3
             // 
@@ -719,7 +719,7 @@ namespace Plumber_Game
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(788, 11);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 16);
+            this.label5.Size = new System.Drawing.Size(86, 16);
             this.label5.TabIndex = 18;
             this.label5.Text = "SELECTED";
             // 
@@ -729,7 +729,7 @@ namespace Plumber_Game
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(699, 101);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 16);
+            this.label1.Size = new System.Drawing.Size(47, 16);
             this.label1.TabIndex = 20;
             this.label1.Text = "NEXT";
             // 
@@ -779,6 +779,7 @@ namespace Plumber_Game
             this.label6.Size = new System.Drawing.Size(258, 13);
             this.label6.TabIndex = 23;
             this.label6.Text = "*На правую кнопку можно удалять трубу !";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // pictureBoxUi1
             // 

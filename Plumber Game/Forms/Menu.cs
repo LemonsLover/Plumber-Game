@@ -76,5 +76,10 @@ namespace Plumber_Game
                     Application.Restart();
                 }     
         }
+
+        private void labelMenu_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Спасибо Васьковському Виталику (м)оральную поддержку !", "Пасибос !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

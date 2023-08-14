@@ -131,8 +131,8 @@ namespace Plumber_Game
         {
             timer.Enabled = false;
             new Menu().Show();
-            this.Hide();
-            character.Hide();
+            this.Dispose();
+            character.Dispose();
         }
 
         private void PlumberGame_LocationChanged(object sender, EventArgs e)

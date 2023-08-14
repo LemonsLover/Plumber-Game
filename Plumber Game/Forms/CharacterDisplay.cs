@@ -15,7 +15,7 @@ namespace Plumber_Game
 
         Point HatLocation;
 
-        
+
         public static int AvalibleHats = Properties.Settings.Default.avalibleHats;
 
         int _selectedHat = Properties.Settings.Default.selectedHat;
