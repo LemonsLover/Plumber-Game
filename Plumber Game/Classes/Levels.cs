@@ -105,7 +105,7 @@ namespace Plumber_Game
                                             9,  5,  5,  9, 9,
                                             2,  0,  0,  13, 5  }),
 
-             new Level("20" ,new int[] {    9, 5, 11, 5, 9,
+             new Level("16" ,new int[] {    9, 5, 11, 5, 9,
                                             9, 5, 11, 5, 1,
                                             11, 11, 11, 11, 11,
                                             3, 5, 11, 5, 9,
@@ -130,7 +130,7 @@ namespace Plumber_Game
                                             9, 12, 5, 12, 6 },false, true),
 
            
-            new Level("16" ,new int[] {    4, 0, 11, 0, 5,
+            new Level("20" ,new int[] {    4, 0, 11, 0, 5,
                                             12, 0, 11, 0, 5,
                                             9, 5, 11, 0, 0,
                                             0, 9, 11, 5, 16,
