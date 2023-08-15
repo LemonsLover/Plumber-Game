@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace Plumber_Game
 {
@@ -14,20 +9,20 @@ namespace Plumber_Game
         [JsonProperty("levelArr")]
         public int[] LevelArr;
         [JsonIgnore]
-        public bool IsCastom = false;
+        public bool IsCustom = false;
         [JsonProperty("isNoClip")]
-        public readonly bool isNoClip;
+        public readonly bool IsNoClip;
         [JsonProperty("isOnTime")]
-        public readonly bool isOnTime;
+        public readonly bool IsOnTime;
 
 
-        public Level(string Name, int[] LevelArr, bool isCastom = false, bool isNoClip = false, bool isOnTime = true)
+        public Level(string name, int[] levelArr, bool isCustom = false, bool isNoClip = false, bool isOnTime = true)
         {
-            this.Name = Name;
-            this.LevelArr = LevelArr;
-            this.IsCastom = isCastom;
-            this.isNoClip = isNoClip;
-            this.isOnTime = isOnTime;
+            Name = name;
+            LevelArr = levelArr;
+            IsCustom = isCustom;
+            IsNoClip = isNoClip;
+            IsOnTime = isOnTime;
         }
     }
 }

@@ -58,7 +58,7 @@ namespace Plumber_Game
                     tile.Image = TilesIcons[Level.LevelArr[i]];
                     if (Level.LevelArr[i] == 0)
                     {
-                        if (CorrectLevel == 0 || CorrectLevel > 15 || Level.IsCastom)
+                        if (CorrectLevel == 0 || CorrectLevel > 15 || Level.IsCustom)
                         {
                             int rand = rnd.Next(0, 101);
                             if (rand >= 0 && rand <= 80)
@@ -90,7 +90,7 @@ namespace Plumber_Game
                             tile.Image = TilesIcons[rnd.Next(5, 11)]; 
                     }
                 }
-            } while (!Check(noClip) && CorrectLevel == 0 && !Level.IsCastom);
+            } while (!Check(noClip) && CorrectLevel == 0 && !Level.IsCustom);
             RollTiles();
         }
 

@@ -11,10 +11,10 @@ namespace Plumber_Game
     {        
         public int HatHight { get; set; }
 
-        public Hat(Image HatImage, int HatHight)
-            : base(HatImage)
+        public Hat(Image hatImage, int hatHight)
+            : base(hatImage)
         {
-            this.HatHight = HatHight;
+            HatHight = hatHight;
         }
     }
 }

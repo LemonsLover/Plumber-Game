@@ -9,43 +9,20 @@ namespace Plumber_Game
 {
     public abstract class Sprite
     {
-        Image image;
-        Size size;
+        public Image Image { get; set; }
 
-        public Image Image
+        public Size Size { get; set; }
+
+        public Sprite(Image image)
         {
-            get
-            {
-                return image;
-            }
-            set
-            {
-                image = value;
-            }
+            this.Image = image;
+            this.Size = image.Size;
         }
 
-        public Size Size
+        public Sprite(Image image, Size size)
         {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
-
-        public Sprite(Image Image)
-        {
-            this.image = Image;
-            this.size = Image.Size;
-        }
-
-        public Sprite(Image Image, Size Size)
-        {
-            this.image = Image;
-            this.size = Size;
+            this.Image = image;
+            this.Size = size;
         }
     }
 }

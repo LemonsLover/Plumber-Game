@@ -6,11 +6,11 @@ namespace Plumber_Game
     {
         public Point HeadLocation { get; set; }
 
-        public Character(Image Image, Point HeadLocation)
-            :base(Image)
+        public Character(Image image, Point headLocation)
+            :base(image)
 
         {
-            this.HeadLocation = HeadLocation;
+            HeadLocation = headLocation;
         }
     }
 }

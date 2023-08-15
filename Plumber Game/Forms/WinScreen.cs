@@ -16,11 +16,11 @@ namespace Plumber_Game
 
         private void WinScreen_Load(object sender, EventArgs e)
         {
-            if(correctLevel.isOnTime)
+            if(correctLevel.IsOnTime)
                 labelTimeLeft.Text = $"Оставшаеся время: {PlumberGame.time}c";
 
             labelAmountOfConections.Text = $"Длина соединеия: {GameField.amountOfConections}т";
-            if (Levels.CorrectLevelId == Levels.AvailableLevel && !correctLevel.IsCastom)
+            if (Levels.CorrectLevelId == Levels.AvailableLevel && !correctLevel.IsCustom)
             {
                 Properties.Settings.Default.avalibleLevel = ++Levels.AvailableLevel;
                 Properties.Settings.Default.Save();
@@ -34,13 +34,13 @@ namespace Plumber_Game
 
 
 
-            if (Levels.CorrectLevelId == Levels.LevelAmount && !correctLevel.IsCastom)
+            if (Levels.CorrectLevelId == Levels.LevelAmount && !correctLevel.IsCustom)
             {
                 labelCompGame.Visible = true;
                 buttonNextLevel.Enabled = false;
             }
 
-            else if (Levels.CorrectLevelId == 0 || Levels.CorrectLevelId > 20 && !correctLevel.IsCastom)
+            else if (Levels.CorrectLevelId == 0 || Levels.CorrectLevelId > 20 && !correctLevel.IsCustom)
             {
                 labelRandomly.Visible = true;
                 buttonNextLevel.Enabled = false;
@@ -48,9 +48,9 @@ namespace Plumber_Game
             else
                 labelWin.Visible = true;
 
-            if (Levels.CorrectLevelId == 0 || correctLevel.IsCastom)
+            if (Levels.CorrectLevelId == 0 || correctLevel.IsCustom)
                 buttonAgain.Visible = true;
-            if (Levels.CorrectLevelId != 0 && !correctLevel.IsCastom)
+            if (Levels.CorrectLevelId != 0 && !correctLevel.IsCustom)
                 buttonNextLevel.Visible = true;
         }
 

@@ -16,9 +16,9 @@ namespace Plumber_Game
         Point HatLocation;
 
 
-        public static int AvalibleHats = Properties.Settings.Default.avalibleHats;
+        public static int AvalibleHats = Settings.Default.avalibleHats;
 
-        int _selectedHat = Properties.Settings.Default.selectedHat;
+        int _selectedHat = Settings.Default.selectedHat;
         int _charPosotion = 1;
 
         public CharacterDisplay()
@@ -31,8 +31,8 @@ namespace Plumber_Game
         {
             if (AvalibleHats != hats.Count - 1)
             {
-                Properties.Settings.Default.avalibleHats = AvalibleHats++;
-                Properties.Settings.Default.Save();
+                Settings.Default.avalibleHats = AvalibleHats++;
+                Settings.Default.Save();
             }
 
             return hats[AvalibleHats];
@@ -43,7 +43,7 @@ namespace Plumber_Game
 
             if (charID <= 0 || charID > 3)
             {
-                this.BackgroundImage = characterPos[1].Image;
+                BackgroundImage = characterPos[1].Image;
                 _charPosotion = 1;
             }
             else
@@ -54,7 +54,7 @@ namespace Plumber_Game
                 HatLocation.Y -= hats[_selectedHat].HatHight;
 
                 pictureBoxHat.Location = HatLocation;
-                this.BackgroundImage = characterPos[charID].Image;
+                BackgroundImage = characterPos[charID].Image;
             }
         }
 
@@ -65,14 +65,14 @@ namespace Plumber_Game
 
             pictureBoxHat.Location = HatLocation;
             pictureBoxHat.BackgroundImage = hats[_selectedHat].Image;
-            Properties.Settings.Default.selectedHat = _selectedHat;
-            Properties.Settings.Default.Save();
+            Settings.Default.selectedHat = _selectedHat;
+            Settings.Default.Save();
         }
 
         private void Character_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.DarkGray;
-            this.TransparencyKey = Color.DarkGray;
+            BackColor = Color.DarkGray;
+            TransparencyKey = Color.DarkGray;
             ChangeCharsHat();
         }
 
@@ -81,7 +81,7 @@ namespace Plumber_Game
             Point gameLocation = Formlocation;
             gameLocation.X += FormWidth - 7;
             gameLocation.Y += 30;
-            this.Location = gameLocation;
+            Location = gameLocation;
         }
 
 
