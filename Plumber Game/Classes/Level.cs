@@ -13,8 +13,8 @@ namespace Plumber_Game
         public string Name;
         [JsonProperty("levelArr")]
         public int[] LevelArr;
-        [JsonProperty("isCastom")]
-        public readonly bool IsCastom;
+        [JsonIgnore]
+        public bool IsCastom = false;
         [JsonProperty("isNoClip")]
         public readonly bool isNoClip;
         [JsonProperty("isOnTime")]

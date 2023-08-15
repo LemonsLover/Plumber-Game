@@ -175,6 +175,8 @@ namespace Plumber_Game
             try
             {
                 List<Level> levels = JsonConvert.DeserializeObject<List<Level>>(File.ReadAllText("levels.json"));
+                foreach (var lvl in levels)
+                    lvl.IsCastom = true;
                 return levels != null ? levels : new List<Level>();
             }
             catch
