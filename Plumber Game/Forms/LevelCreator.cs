@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using Plumber_Game.Services;
 
 namespace Plumber_Game
 {
@@ -82,9 +83,9 @@ namespace Plumber_Game
             pictureBoxSelectetTile.BackgroundImage = TilesIcons[selectedTileId];
 
             if (selectedTileId == 0)
-                labelTileId.Text = $"RND";
+                labelTileId.Text = TranslationManager.Get("ui.randomTile");
             else
-                labelTileId.Text = $"Id: {selectedTileId}";
+                labelTileId.Text = string.Format(TranslationManager.Get("ui.tileIdFormat"), selectedTileId);
 
             if (selectedTileId == 17)
             {
@@ -151,9 +152,9 @@ namespace Plumber_Game
             }
 
             if (exitsAmount < 2)
-                MessageBox.Show("Не достаточно выходов ! Их должно быть 2 !");
+                MessageBox.Show(TranslationManager.Get("messages.insufficientExits"));
             else if (exitsAmount > 2)
-                MessageBox.Show("Много выходов ! Их должно быть 2 !");
+                MessageBox.Show(TranslationManager.Get("messages.tooManyExits"));
             else
             {
                 try
@@ -161,19 +162,19 @@ namespace Plumber_Game
                     foreach (Level oldLevel in Levels.CastomLevelsList)
                     {
                         if (oldLevel.Name == textBoxLevelName.Text)
-                            throw new Exception("Уровень с таким названием уже существует !");
+                            throw new Exception(TranslationManager.Get("messages.duplicateLevelName"));
                     }
                     Levels.AddLevel(new Level(textBoxLevelName.Text, newLevel, true, checkBoxNoClip.Checked, checkBoxOnTime.Checked));
                     character.ChangeCharPosition(2);
-                    MessageBox.Show($"Уровень был успешно сохранен !", "Успех !");
+                    MessageBox.Show(TranslationManager.Get("messages.levelSavedSuccess"), TranslationManager.Get("messages.success"));
                     character.ChangeCharPosition(3);
 
-                    textBoxLevelName.Text = "castomLevel" + Levels.CastomLevelsList.Count;
+                    textBoxLevelName.Text = string.Format(TranslationManager.Get("ui.customLevelFormat"), Levels.CastomLevelsList.Count);
                     FillWithEmpty();
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(e.Message, TranslationManager.Get("messages.error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -182,7 +183,9 @@ namespace Plumber_Game
 
         private void LevelCreator_Load(object sender, EventArgs e)
         {
-            textBoxLevelName.Text = "castomLevel" + Levels.CastomLevelsList.Count;
+            UpdateUILanguage();
+            
+            textBoxLevelName.Text = string.Format(TranslationManager.Get("ui.customLevelFormat"), Levels.CastomLevelsList.Count);
 
             this.MouseWheel += FandeMouseWeel;
             FillWithEmpty();
@@ -193,6 +196,24 @@ namespace Plumber_Game
             character.Show();
             character.Attach(this.Location, this.Width);
             character.ChangeCharPosition(3);
+        }
+
+        private void UpdateUILanguage()
+        {
+            buttonMenu.Text = TranslationManager.Get("levelCreator.menu");
+            buttonFillRandom.Text = TranslationManager.Get("levelCreator.fillRandomBtn");
+            buttonSaveLevel.Text = TranslationManager.Get("levelCreator.saveLevelBtn");
+            buttonClearPlayground.Text = TranslationManager.Get("levelCreator.clearField");
+            label7.Text = TranslationManager.Get("levelCreator.levelNameLabel");
+            checkBoxNoClip.Text = TranslationManager.Get("levelCreator.noClipCheck");
+            checkBoxOnTime.Text = TranslationManager.Get("levelCreator.timedCheck");
+            labelCaption1.Text = TranslationManager.Get("levelCreator.instruction1");
+            labelCaption2.Text = TranslationManager.Get("levelCreator.instruction2");
+            labelCaption3.Text = TranslationManager.Get("levelCreator.instruction3");
+            labelCaption4.Text = TranslationManager.Get("levelCreator.instruction4");
+            label3.Text = TranslationManager.Get("levelCreator.note1");
+            label4.Text = TranslationManager.Get("levelCreator.note2");
+            label6.Text = TranslationManager.Get("levelCreator.note3");
         }
 
         private void LevelCreator_LocationChanged(object sender, EventArgs e)
@@ -232,7 +253,7 @@ namespace Plumber_Game
 
         private void label6_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Спасибо Владу Мурсалову за подсказку !", "Пасибос !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(TranslationManager.Get("special.creditsVlad"), TranslationManager.Get("messages.credits"), MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

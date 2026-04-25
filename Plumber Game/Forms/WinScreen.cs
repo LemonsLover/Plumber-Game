@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Plumber_Game.Services;
 
 namespace Plumber_Game
 {
@@ -16,10 +17,12 @@ namespace Plumber_Game
 
         private void WinScreen_Load(object sender, EventArgs e)
         {
+            UpdateUILanguage();
+            
             if(correctLevel.IsOnTime)
-                labelTimeLeft.Text = $"Оставшаеся время: {PlumberGame.time}c";
+                labelTimeLeft.Text = string.Format(TranslationManager.Get("winScreen.timeRemaining"), PlumberGame.time);
 
-            labelAmountOfConections.Text = $"Длина соединеия: {GameField.amountOfConections}т";
+            labelAmountOfConections.Text = string.Format(TranslationManager.Get("winScreen.connectionLength"), GameField.amountOfConections);
             if (Levels.CorrectLevelId == Levels.AvailableLevel && !correctLevel.IsCustom)
             {
                 Properties.Settings.Default.avalibleLevel = ++Levels.AvailableLevel;
@@ -52,6 +55,18 @@ namespace Plumber_Game
                 buttonAgain.Visible = true;
             if (Levels.CorrectLevelId != 0 && !correctLevel.IsCustom)
                 buttonNextLevel.Visible = true;
+        }
+
+        private void UpdateUILanguage()
+        {
+            this.Text = TranslationManager.Get("winScreen.youWon");
+            labelWin.Text = TranslationManager.Get("winScreen.youWon");
+            labelRandomly.Text = TranslationManager.Get("winScreen.randomLevel");
+            labelCompGame.Text = TranslationManager.Get("winScreen.gameCompleted");
+            buttonMenu.Text = TranslationManager.Get("winScreen.menu");
+            buttonLevelSelect.Text = TranslationManager.Get("winScreen.levelSelect");
+            buttonNextLevel.Text = TranslationManager.Get("winScreen.nextLevel");
+            buttonAgain.Text = TranslationManager.Get("winScreen.again");
         }
 
         private void buttonMenu_Click(object sender, EventArgs e)

@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Plumber_Game.Services;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
@@ -129,7 +130,7 @@ namespace Plumber_Game
                                             5, 5, 5, 9, 14,
                                             9, 12, 5, 12, 6 },false, true),
 
-           
+
             new Level("20" ,new int[] {    4, 0, 11, 0, 5,
                                             12, 0, 11, 0, 5,
                                             9, 5, 11, 0, 0,
@@ -157,7 +158,7 @@ namespace Plumber_Game
 
         public static void ChangeCorrectLevelList(bool isCustomMode)
         {
-            if(isCustomMode)
+            if (isCustomMode)
                 CorrectlevelList = CastomLevelsList;
             else
                 CorrectlevelList = GameLevelsList;
@@ -181,11 +182,16 @@ namespace Plumber_Game
             }
             catch
             {
-                DialogResult userAns = MessageBox.Show("Ошибка при считовании файла ! Очистить содержимое ?", "Ошибка", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                DialogResult userAns = MessageBox.Show(TranslationManager.Get("messages.fileReadError"), TranslationManager.Get("messages.fileReadErrorTitle"), MessageBoxButtons.YesNo, MessageBoxIcon.Error);
                 if (userAns == DialogResult.Yes)
                 {
                     File.Delete("levels.json");
-                    File.Create("levels.json").Close();
+
+                    var stream = File.Create("levels.json");
+                    var sw = new StreamWriter(stream);
+                    sw.WriteLine("[]");
+                    sw.Dispose();
+                    stream.Dispose();
                 }
                 return new List<Level>();
             }

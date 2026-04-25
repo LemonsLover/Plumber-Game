@@ -37,6 +37,8 @@ namespace Plumber_Game
             this.buttonLevelCreation = new System.Windows.Forms.Button();
             this.buttonClearProgress = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.labelLanguage = new System.Windows.Forms.Label();
+            this.comboBoxLanguage = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button1
@@ -121,12 +123,35 @@ namespace Plumber_Game
             this.label2.Text = "PLAMBER\r\nGAME";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelLanguage
+            // 
+            this.labelLanguage.AutoSize = true;
+            this.labelLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelLanguage.Location = new System.Drawing.Point(12, 350);
+            this.labelLanguage.Name = "labelLanguage";
+            this.labelLanguage.Size = new System.Drawing.Size(72, 17);
+            this.labelLanguage.TabIndex = 8;
+            this.labelLanguage.Text = "Language:";
+            // 
+            // comboBoxLanguage
+            // 
+            this.comboBoxLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboBoxLanguage.FormattingEnabled = true;
+            this.comboBoxLanguage.Location = new System.Drawing.Point(12, 370);
+            this.comboBoxLanguage.Name = "comboBoxLanguage";
+            this.comboBoxLanguage.Size = new System.Drawing.Size(276, 25);
+            this.comboBoxLanguage.TabIndex = 9;
+            this.comboBoxLanguage.SelectedIndexChanged += new System.EventHandler(this.comboBoxLanguage_SelectedIndexChanged);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 350);
+            this.ClientSize = new System.Drawing.Size(300, 430);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBoxLanguage);
+            this.Controls.Add(this.labelLanguage);
             this.Controls.Add(this.buttonClearProgress);
             this.Controls.Add(this.buttonLevelCreation);
             this.Controls.Add(this.label1);
@@ -137,9 +162,9 @@ namespace Plumber_Game
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(300, 350);
+            this.MaximumSize = new System.Drawing.Size(300, 430);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(300, 350);
+            this.MinimumSize = new System.Drawing.Size(300, 430);
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PLUMBER GAME";
@@ -159,5 +184,7 @@ namespace Plumber_Game
         private System.Windows.Forms.Button buttonLevelCreation;
         private System.Windows.Forms.Button buttonClearProgress;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelLanguage;
+        private System.Windows.Forms.ComboBox comboBoxLanguage;
     }
 }

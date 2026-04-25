@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Plumber_Game.Services;
 
 namespace Plumber_Game
 {
@@ -16,6 +17,8 @@ namespace Plumber_Game
 
         private void LevelSelect_Load(object sender, EventArgs e)
         {
+            UpdateUILanguage();
+            
             Button[] Buttons = { null, buttonLevel1, buttonLevel2, buttonLevel3, buttonLevel4, buttonLevel5, buttonLevel6, buttonLevel7, buttonLevel8, buttonLevel9, buttonLevel10,
             buttonLevel11, buttonLevel12, buttonLevel13, buttonLevel14, buttonLevel15, buttonLevel16, buttonLevel17, buttonLevel18, buttonLevel19, buttonLevel20};
 
@@ -34,6 +37,15 @@ namespace Plumber_Game
                 comboBoxCustomLevels.Items.Add(level.Name);
             }
 
+        }
+
+        private void UpdateUILanguage()
+        {
+            label1.Text = TranslationManager.Get("levelSelect.title");
+            buttonMenu.Text = TranslationManager.Get("levelSelect.menu");
+            buttonLevelGenerate.Text = TranslationManager.Get("levelSelect.generated");
+            buttonLevelRandom.Text = TranslationManager.Get("levelSelect.random");
+            label2.Text = TranslationManager.Get("levelSelect.customLevels");
         }
 
 
